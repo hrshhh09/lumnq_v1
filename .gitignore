@@ -1,0 +1,6 @@
+brands.csv
+scout/
+*_context.md
+meta_scouting_implementation.md
+.DS_Store
+.vercel

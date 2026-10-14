@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>lumnq: Your product. In motion. Perfectly.</title>
+<meta name="description" content="Turn one product photo into scroll-stopping short videos, with the product looking exactly right in every frame." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor-glow" aria-hidden="true"></div>
+
+<!-- 1. NAV -->
+<header class="nav">
+  <a href="#" class="logo">lumnq<span>.</span></a>
+  <nav>
+    <div class="dropdown">
+      <button>Product ▾</button>
+      <div class="menu glass">
+        <a href="#modes">Product Hero</a><a href="#modes">Static → Motion</a><a href="#modes">Hook Lab</a><a href="#modes">Explainer</a><a href="#modes">Remix / Resize</a>
+      </div>
+    </div>
+    <a href="#showcase">Showcase</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#" class="muted">Login</a>
+    <a href="#start" class="btn btn-accent">Start free</a>
+  </nav>
+</header>
+
+<!-- 2. HERO -->
+<section class="hero">
+  <div class="reel" aria-hidden="true">
+    <div class="reel-track" id="reelTrack"></div>
+  </div>
+  <div class="hero-shade" aria-hidden="true"></div>
+  <div class="hero-inner reveal">
+    <p class="eyebrow">AI product video, label-perfect</p>
+    <h1>Your product.<br/><em>In motion.</em> Perfectly.</h1>
+    <p class="sub">Turn one product photo into scroll-stopping short videos, with your label, logo and packaging exactly right in every frame.</p>
+    <label class="dropzone glass" id="start">
+      <input type="file" accept="image/*" hidden />
+      <span class="dz-icon">＋</span>
+      <span><strong>Drop your product image</strong><br/><small>PNG or JPG · first 3 videos free</small></span>
+      <span class="btn btn-accent">Generate</span>
+    </label>
+  </div>
+</section>
+
+<!-- 3. LOGO STRIP -->
+<section class="logos">
+  <p>Used by brands in supplements, skincare, beverage &amp; fashion</p>
+  <div class="marquee"><div class="marquee-track">
+    <span>NOVA&nbsp;LABS</span><span><em>Velour</em></span><span>KIND·SKIN</span><span>Ferment&nbsp;Co.</span><span><em>Atelier&nbsp;Nine</em></span><span>PULSE</span><span>Halcyon</span><span>ORRA</span>
+    <span>NOVA&nbsp;LABS</span><span><em>Velour</em></span><span>KIND·SKIN</span><span>Ferment&nbsp;Co.</span><span><em>Atelier&nbsp;Nine</em></span><span>PULSE</span><span>Halcyon</span><span>ORRA</span>
+  </div></div>
+</section>
+
+<!-- 4. BEFORE → AFTER -->
+<section class="section">
+  <div class="head reveal">
+    <p class="eyebrow">Before → After</p>
+    <h2>One packshot in.<br/><em>A finished ad</em> out.</h2>
+  </div>
+  <div class="ba reveal" id="ba">
+    <div class="ba-after scene scene-amber">
+      <div class="product bottle float"><span>ORRA</span><small>Vitamin C Serum</small></div>
+      <div class="caption">Glow that lasts all day ✦</div>
+      <span class="tag">After · 9:16 · 8s</span>
+    </div>
+    <div class="ba-before" id="baBefore">
+      <div class="packshot"><div class="product bottle"><span>ORRA</span><small>Vitamin C Serum</small></div></div>
+      <span class="tag">Before · packshot.jpg</span>
+    </div>
+    <div class="ba-handle" id="baHandle"><span>⟷</span></div>
+  </div>
+</section>
+
+<!-- 5. MODES BENTO -->
+<section class="section" id="modes">
+  <div class="head reveal">
+    <p class="eyebrow">Five modes</p>
+    <h2>Everything a product<br/>needs to <em>move.</em></h2>
+  </div>
+  <div class="bento">
+    <article class="card glass tilt reveal b1"><div class="card-media scene scene-lime"><div class="product can float"><span>PULSE</span></div></div>
+      <h3>Product Hero</h3><p>Packshot → cinematic 3D-style scene, 5–10s.</p></article>
+    <article class="card glass tilt reveal b2"><div class="card-media scene scene-rose"><div class="static-ad"><b>-20%</b><i>Static ad</i></div></div>
+      <h3>Static → Motion</h3><p>Your best static ad, animated into video.</p></article>
+    <article class="card glass tilt reveal b3"><div class="card-media hooks"><span>“Stop scrolling if…”</span><span>“I tried 12 serums…”</span><span>“POV: your skin at 7am”</span><span>“Nobody talks about…”</span></div>
+      <h3>Hook Lab</h3><p>One winner → 10 new first-3-second hooks.</p></article>
+    <article class="card glass tilt reveal b4"><div class="card-media scene scene-blue"><div class="orbit"><i></i><i></i><i></i></div></div>
+      <h3>Explainer</h3><p>Ingredients &amp; claims, turned into a "how it works" short.</p></article>
+    <article class="card glass tilt reveal b5"><div class="card-media ratios"><span class="r916">9:16</span><span class="r45">4:5</span><span class="r11">1:1</span></div>
+      <h3>Remix / Resize</h3><p>Any output → every format, with captions + music.</p></article>
+  </div>
+</section>
+
+<!-- 6. PRODUCT STAYS PERFECT -->
+<section class="section perfect">
+  <div class="head reveal">
+    <p class="eyebrow">The difference</p>
+    <h2>Other tools warp labels.<br/><em>We don't.</em></h2>
+  </div>
+  <div class="compare reveal">
+    <figure class="glass">
+      <div class="scene scene-dim"><div class="product bottle warped"><span>OЯRA</span><small>Vitamn C Sreum</small></div></div>
+      <figcaption><b>Generic AI video</b><span class="bad">Melted logo · garbled text · shape drift</span></figcaption>
+    </figure>
+    <figure class="glass accent-border">
+      <div class="scene scene-amber"><div class="product bottle float"><span>ORRA</span><small>Vitamin C Serum</small></div></div>
+      <figcaption><b>lumnq</b><span class="good">Pixel-locked label · true colors · exact shape</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 7. HOW IT WORKS -->
+<section class="section">
+  <div class="head reveal"><p class="eyebrow">How it works</p><h2>Three steps. <em>Minutes,</em> not weeks.</h2></div>
+  <ol class="steps">
+    <li class="glass reveal"><span>01</span><h3>Upload</h3><p>Drop a single product photo. We lock its geometry, label and colors.</p></li>
+    <li class="glass reveal"><span>02</span><h3>Pick a mode</h3><p>Hero, Motion, Hook Lab, Explainer or Remix, all on-brand via your Brand Kit.</p></li>
+    <li class="glass reveal"><span>03</span><h3>Export everywhere</h3><p>Presets for Meta, TikTok, Reels and Shorts. Batch 20 variants at once.</p></li>
+  </ol>
+</section>
+
+<!-- 8. SHOWCASE -->
+<section class="section" id="showcase">
+  <div class="head reveal"><p class="eyebrow">Showcase</p><h2>Made with <em>lumnq.</em></h2></div>
+  <div class="filters" id="filters">
+    <button class="active" data-f="all">All</button><button data-f="supplements">Supplements</button><button data-f="skincare">Skincare</button><button data-f="beverage">Beverage</button><button data-f="fashion">Fashion</button>
+  </div>
+  <div class="masonry" id="masonry"></div>
+</section>
+
+<!-- 9. METRICS / TESTIMONIALS -->
+<section class="section metrics">
+  <div class="stats">
+    <div class="reveal"><b data-count="80">0</b><span>%</span><p>lower creative cost</p></div>
+    <div class="reveal"><b data-count="20">0</b><p>variants in 10 minutes</p></div>
+    <div class="reveal"><b data-count="3">0</b><span>×</span><p>more ads tested per week</p></div>
+  </div>
+  <div class="quotes">
+    <blockquote class="glass reveal">“We used to do one shoot per quarter. Now we ship new creatives every Monday, and the bottle looks exactly like the bottle.”<cite>Head of Growth, skincare brand</cite></blockquote>
+    <blockquote class="glass reveal">“Hook Lab paid for the year in a week. Our winning ad got 10 new openers before lunch.”<cite>Founder, supplements D2C</cite></blockquote>
+  </div>
+</section>
+
+<!-- 10. PRICING + FAQ -->
+<section class="section" id="pricing">
+  <div class="head reveal"><p class="eyebrow">Pricing</p><h2>Simple, <em>credit-based.</em></h2></div>
+  <div class="plans">
+    <div class="plan glass reveal"><h3>Free</h3><p class="price">$0</p><ul><li>3 videos</li><li>Watermarked</li><li>All export sizes</li></ul><a class="btn btn-ghost" href="#start">Start free</a></div>
+    <div class="plan glass reveal"><h3>Creator</h3><p class="price">$29<small>/mo</small></p><ul><li>~40 videos / mo</li><li>1 Brand Kit</li><li>No watermark</li></ul><a class="btn btn-ghost" href="#start">Choose Creator</a></div>
+    <div class="plan glass featured reveal"><span class="badge">Most popular</span><h3>Pro</h3><p class="price">$99<small>/mo</small></p><ul><li>~200 videos / mo</li><li>Batch generation</li><li>Hook Lab</li><li>3 brands</li></ul><a class="btn btn-accent" href="#start">Choose Pro</a></div>
+    <div class="plan glass reveal"><h3>Team</h3><p class="price">$299<small>/mo</small></p><ul><li>Team seats</li><li>API access</li><li>Priority render</li></ul><a class="btn btn-ghost" href="#start">Choose Team</a></div>
+  </div>
+  <div class="faq reveal">
+    <details><summary>Will my product really look exactly right?</summary><p>Yes. That's the whole point. lumnq locks your product's shape, label text and colors from your photo, so every frame shows the real thing.</p></details>
+    <details><summary>What do I need to get started?</summary><p>One clean product photo. A white-background packshot works best, but a good phone photo works too.</p></details>
+    <details><summary>Can I use the videos in paid ads?</summary><p>Yes. Paid plans include full commercial rights, with presets for Meta, TikTok, Reels and Shorts.</p></details>
+    <details><summary>What's a credit?</summary><p>One credit is roughly one short video render. Longer or higher-resolution outputs use more.</p></details>
+  </div>
+</section>
+
+<!-- 11. FINAL CTA -->
+<section class="final">
+  <div class="leak" aria-hidden="true"></div>
+  <h2 class="reveal">Put your product<br/><em>in the light.</em></h2>
+  <label class="dropzone glass reveal">
+    <input type="file" accept="image/*" hidden />
+    <span class="dz-icon">＋</span>
+    <span><strong>Drop your product image</strong><br/><small>Your first video in under 2 minutes</small></span>
+    <span class="btn btn-accent">Start free</span>
+  </label>
+</section>
+
+<!-- 12. FOOTER -->
+<footer class="footer">
+  <div><a href="#" class="logo">lumnq<span>.</span></a><p>Product-accurate short video for e-commerce brands.</p></div>
+  <div><h4>Product</h4><a href="#modes">Modes</a><a href="#showcase">Showcase</a><a href="#pricing">Pricing</a></div>
+  <div><h4>Use cases</h4><a href="#">Supplements</a><a href="#">Skincare</a><a href="#">Beverage</a><a href="#">Fashion</a></div>
+  <div><h4>Company</h4><a href="#">Blog</a><a href="#">Login</a><a href="#">Done-for-you →</a></div>
+  <p class="copy">© 2025 lumnq</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
