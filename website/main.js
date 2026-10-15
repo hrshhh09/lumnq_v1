@@ -54,13 +54,3 @@ document.querySelectorAll('.tilt').forEach(c => {
     c.style.transform = `perspective(900px) rotateY(${x*6}deg) rotateX(${-y*6}deg) translateY(-4px)`; });
   c.addEventListener('mouseleave', () => c.style.transform = '');
 });
-
-
-// dropzones
-document.querySelectorAll('.dropzone').forEach(dz => {
-  ['dragover','dragenter'].forEach(ev => dz.addEventListener(ev, e => { e.preventDefault(); dz.classList.add('drag'); }));
-  ['dragleave','drop'].forEach(ev => dz.addEventListener(ev, e => { e.preventDefault(); dz.classList.remove('drag'); }));
-  const show = f => { if (f) dz.querySelector('strong').textContent = `${f.name}. Sign up to generate.`; };
-  dz.addEventListener('drop', e => show(e.dataTransfer.files[0]));
-  dz.querySelector('input').addEventListener('change', e => show(e.target.files[0]));
-});

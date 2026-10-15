@@ -166,9 +166,15 @@ summary{cursor:pointer;font-size:20px;font-weight:400;list-style:none;display:fl
 summary::after{content:"+";color:var(--mut);transition:.3s var(--ease)}details[open] summary::after{transform:rotate(45deg)}
 details p{color:var(--mut);margin-top:12px;max-width:640px}
 
+.lede{max-width:620px;margin-top:24px;color:#c9c6bf}
+.extras{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}.extras>div{padding:26px 30px}.extras .eyebrow{margin-bottom:10px}.extras p:not(.eyebrow){color:#c9c6bf}
+.cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative}
+.btn-lg{padding:15px 26px;font-size:15px}
+.final .sub{position:relative}
+.price-note{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut);margin:12px 0 20px}
 /* final */
 .final{position:relative;text-align:center;padding:220px 24px 180px;overflow:hidden}
-.final h2{font-size:clamp(60px,11vw,180px);margin-bottom:50px;position:relative}
+.final h2{font-size:clamp(60px,11vw,180px);margin-bottom:10px;position:relative}
 .final .dropzone{position:relative}
 .leak{position:absolute;right:-200px;top:-200px;width:900px;height:700px;background:radial-gradient(ellipse,var(--lq-leak-lumen),var(--lq-leak-lumen-lo) 50%,transparent 70%);opacity:.3;filter:blur(var(--lq-blur-leak))}
 
@@ -181,6 +187,7 @@ details p{color:var(--mut);margin-top:12px;max-width:640px}
 .copy{grid-column:1/-1;margin:20px 0 0}
 
 @media(max-width:900px){
+  .extras{grid-template-columns:1fr}
   .nav nav>a:not(.btn),.dropdown{display:none}
   .bento{grid-template-columns:1fr}.bento>*{grid-column:auto!important}
   .compare,.steps,.quotes,.stats{grid-template-columns:1fr}
