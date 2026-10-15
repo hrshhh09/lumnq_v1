@@ -18,8 +18,18 @@ reel.innerHTML = reelItems + reelItems;
 
 // showcase masonry
 const masonry = document.getElementById('masonry');
-masonry.innerHTML = [...products, ...products.slice().reverse()].map((p,i) =>
-  `<div class="tile ${i%3===1?'sq':''}" data-c="${p.c}"><div class="scene scene-${p.sc}">${prod(p)}</div><span class="label">${p.c}</span></div>`).join('');
+const showcase = [
+  {f:'supplements-01',b:'Ferment Co.',c:'supplements'},
+  {f:'skincare-01',b:'Velle',c:'skincare'},
+  {f:'beverage-01',b:'Tide/Line',c:'beverage'},
+  {f:'fashion-01',b:'Orrin',c:'fashion'},
+  {f:'supplements-02',b:'Nocta',c:'supplements'},
+  {f:'skincare-02',b:'Velle',c:'skincare'},
+  {f:'beverage-02',b:'Kold',c:'beverage'},
+  {f:'fashion-02',b:'Orrin',c:'fashion',sq:true},
+];
+masonry.innerHTML = showcase.map(s =>
+  `<div class="tile ${s.sq?'sq':''}" data-c="${s.c}"><img src="assets/showcase/${s.f}.jpg" alt="${s.b} ${s.c} product scene" loading="lazy" /><span class="label"><b>${s.b}</b>${s.c}</span></div>`).join('');
 document.getElementById('filters').addEventListener('click', e => {
   const b = e.target.closest('button'); if (!b) return;
   document.querySelectorAll('#filters button').forEach(x => x.classList.toggle('active', x === b));
@@ -42,10 +52,17 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 const ba = document.getElementById('ba'), before = document.getElementById('baBefore'), handle = document.getElementById('baHandle');
 let dragging = false;
 const setBA = x => { const r = ba.getBoundingClientRect(); const p = Math.max(0, Math.min(100, (x - r.left) / r.width * 100));
-  before.style.clipPath = `inset(0 ${100 - p}% 0 0)`; handle.style.left = p + '%'; };
+  setPct(p); };
+let pct = 50;
+const setPct = p => { pct = Math.max(0, Math.min(100, p));
+  before.style.clipPath = `inset(0 ${100 - pct}% 0 0)`; handle.style.left = pct + '%'; handle.setAttribute('aria-valuenow', Math.round(pct)); };
 ba.addEventListener('pointerdown', e => { dragging = true; ba.setPointerCapture(e.pointerId); setBA(e.clientX); });
 ba.addEventListener('pointermove', e => dragging && setBA(e.clientX));
-ba.addEventListener('pointerup', () => dragging = false);
+['pointerup','pointercancel'].forEach(t => ba.addEventListener(t, () => dragging = false));
+handle.addEventListener('keydown', e => {
+  const d = {ArrowLeft:-5, ArrowRight:5, Home:-100, End:100}[e.key];
+  if (d !== undefined) { e.preventDefault(); setPct(pct + d); }
+});
 
 // tilt cards
 document.querySelectorAll('.tilt').forEach(c => {
