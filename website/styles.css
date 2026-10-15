@@ -86,7 +86,8 @@ h3{font-weight:500;font-size:20px;letter-spacing:-.01em}
 .ba{position:relative;aspect-ratio:3/2;max-width:1200px;margin-inline:auto;border-radius:24px;overflow:hidden;border:1px solid var(--line);user-select:none;cursor:ew-resize;touch-action:pan-y}
 .ba>div:not(.ba-handle){position:absolute;inset:0}
 .ba img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
-.ba-before{clip-path:inset(0 50% 0 0);background:#ece9e2}
+.ba-before{clip-path:inset(0 50% 0 0);background:#fcfcfc}
+.ba-before img{transform:translate(0,-8.2%) scale(.72);transform-origin:50% 50%}
 .ba-handle{cursor:ew-resize;outline:none}.ba-handle:focus-visible span{box-shadow:0 0 0 3px var(--acc)}
 .packshot{position:absolute;inset:0;display:grid;place-items:center}
 .packshot .product{box-shadow:0 20px 30px rgba(0,0,0,.15)}
