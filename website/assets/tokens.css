@@ -1,0 +1,24 @@
+/* lumnq design tokens — source of truth: brand/BRAND_KIT.md */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+:root{
+  /* core */
+  --lq-black:#0A0A0B; --lq-paper:#F2F0EB; --lq-lime:#D4FF3A; --lq-ash:#8B8984;
+  --lq-surface:#111112; --lq-line:rgba(242,240,235,.10); --lq-glass:rgba(255,255,255,.03);
+  --lq-lime-hover:#B8D92A; --lq-lime-on-paper:#9AB81A; --lq-error:#FF6B6B;
+  /* light leaks (hi → lo) */
+  --lq-leak-amber:#FF9A3C; --lq-leak-amber-lo:#2A1503;
+  --lq-leak-blush:#FFB3C7; --lq-leak-blush-lo:#1A0610;
+  --lq-leak-ice:#8FD3FF;   --lq-leak-ice-lo:#020A1A;
+  --lq-leak-violet:#A66BFF;--lq-leak-violet-lo:#0D0418;
+  --lq-leak-lumen:#EAFF8A; --lq-leak-lumen-lo:#0E1402;
+  /* type */
+  --lq-serif:'Instrument Serif',Georgia,serif;
+  --lq-sans:'Inter Tight',system-ui,sans-serif;
+  --lq-mono:'JetBrains Mono',ui-monospace,monospace;
+  --lq-h1:clamp(56px,10vw,152px); --lq-h2:clamp(44px,6.5vw,104px); --lq-h3:20px;
+  --lq-body:17px; --lq-eyebrow:11px;
+  /* shape & fx */
+  --lq-radius-card:20px; --lq-radius-phone:28px; --lq-radius-pill:999px;
+  --lq-blur-glass:14px; --lq-blur-leak:90px; --lq-grain-opacity:.06;
+  --lq-ease:cubic-bezier(.2,.7,.2,1);
+}

@@ -1,12 +1,11 @@
-const scenes = ['amber','lime','rose','blue','violet'];
 const products = [
-  {n:'ORRA',s:'Vitamin C Serum',t:'bottle',c:'skincare',sc:'amber'},
-  {n:'PULSE',s:'',t:'can',c:'beverage',sc:'lime'},
-  {n:'NOVA',s:'Daily Greens',t:'bottle',c:'supplements',sc:'blue'},
-  {n:'Velour',s:'Silk Scarf',t:'bottle',c:'fashion',sc:'rose'},
-  {n:'KIND',s:'Night Cream',t:'bottle',c:'skincare',sc:'violet'},
-  {n:'FIZZ',s:'',t:'can',c:'beverage',sc:'amber'},
-  {n:'HALC',s:'Magnesium',t:'bottle',c:'supplements',sc:'lime'},
+  {n:'ORRA',s:'Vitamin C Serum',t:'bottle',c:'skincare',sc:'blush'},
+  {n:'PULSE',s:'',t:'can',c:'beverage',sc:'ice'},
+  {n:'NOVA',s:'Daily Greens',t:'bottle',c:'supplements',sc:'amber'},
+  {n:'Velour',s:'Silk Scarf',t:'bottle',c:'fashion',sc:'violet'},
+  {n:'KIND',s:'Night Cream',t:'bottle',c:'skincare',sc:'blush'},
+  {n:'FIZZ',s:'',t:'can',c:'beverage',sc:'ice'},
+  {n:'HALC',s:'Magnesium',t:'bottle',c:'supplements',sc:'amber'},
   {n:'ATL9',s:'Eau de Parfum',t:'bottle',c:'fashion',sc:'violet'},
 ];
 const prod = p => `<div class="product ${p.t} float"><span>${p.n}</span>${p.s?`<small>${p.s}</small>`:''}</div>`;
@@ -56,15 +55,12 @@ document.querySelectorAll('.tilt').forEach(c => {
   c.addEventListener('mouseleave', () => c.style.transform = '');
 });
 
-// cursor glow
-const glow = document.querySelector('.cursor-glow');
-addEventListener('mousemove', e => { glow.style.left = e.clientX + 'px'; glow.style.top = e.clientY + 'px'; });
 
 // dropzones
 document.querySelectorAll('.dropzone').forEach(dz => {
   ['dragover','dragenter'].forEach(ev => dz.addEventListener(ev, e => { e.preventDefault(); dz.classList.add('drag'); }));
   ['dragleave','drop'].forEach(ev => dz.addEventListener(ev, e => { e.preventDefault(); dz.classList.remove('drag'); }));
-  const show = f => { if (f) dz.querySelector('strong').textContent = `✓ ${f.name}. Sign up to generate`; };
+  const show = f => { if (f) dz.querySelector('strong').textContent = `${f.name}. Sign up to generate.`; };
   dz.addEventListener('drop', e => show(e.dataTransfer.files[0]));
   dz.querySelector('input').addEventListener('change', e => show(e.target.files[0]));
 });
